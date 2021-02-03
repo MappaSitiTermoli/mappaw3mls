@@ -139,7 +139,7 @@ var markers = L.markerClusterGroup({disableClusteringAtZoom: 16});
    popupAnchor:  [-1, -39] // point from which the popup should open relative to the iconAnchor
 });}
           if(row.radio == "LTE" ) {      
-      var marker = L.marker([row.lat, row.lon], {icon: iconemarker}).bindPopup("<b>RADIO:</b> " + row.radio + "<br /><b>LAT:</b> " + row.lat + "<br /><b>LON:</b> " + row.lon + "<br /><b>ENODEB:</b> " + enb + "<br /><b>CELL ID:</b> " + row.cell + "<br /><b>SETTORE:</b> " + sec + "<br /><b>BANDA:</b> " + band.fontcolor(colorebande) + "<br /><b>LAC:</b> " + row.area + "<br /><b>PCI:</b> " + row.unit + "<br />").openPopup();
+      var marker = L.marker([row.lat, row.lon], {icon: iconemarker}).bindPopup("<b>MCC:</b> " + row.mcc + "<br /><b>MNC:</b> " + row.net + "<br /><b>RADIO:</b> " + row.radio + "<br /><b>LAT:</b> " + row.lat + "<br /><b>LON:</b> " + row.lon + "<br /><b>ENODEB:</b> " + enb + "<br /><b>CELL ID:</b> " + row.cell + "<br /><b>SETTORE:</b> " + sec + "<br /><b>BANDA:</b> " + band.fontcolor(colorebande) + "<br /><b>LAC:</b> " + row.area + "<br /><b>PCI:</b> " + row.unit + "<br />").openPopup();
       marker.bindTooltip("<span>" + enb + ":" + sec + "</span>" , {permanent: true, direction: 'bottom'}).openTooltip(); } else if(row.radio == "UMTS" || row.radio == "GSM") {
 	      iconemarker = L.icon({
     iconUrl: 'default.png',
