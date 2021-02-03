@@ -147,7 +147,7 @@ var markers = L.markerClusterGroup({disableClusteringAtZoom: 16});
    iconAnchor:   [13, 41], // point of the icon which will correspond to marker's location
    popupAnchor:  [-1, -39] // point from which the popup should open relative to the iconAnchor
 });
-      var marker = L.marker([row.lat, row.lon], {icon: iconemarker}).bindPopup("<b>RADIO:</b> " + row.radio + "<br /><b>LAT:</b> " + row.lat + "<br /><b>LON:</b> " + row.lon + "<br /><b>CELL ID:</b> " + row.cell + "<br /><b>LAC:</b> " + row.area + "<br /><b>PCI:</b> " + row.unit + "<br />").openPopup();
+      var marker = L.marker([row.lat, row.lon], {icon: iconemarker}).bindPopup("<b>MCC:</b> " + row.mcc + "<br /><b>MNC:</b> " + row.net + "<br /><b>RADIO:</b> " + row.radio + "<br /><b>LAT:</b> " + row.lat + "<br /><b>LON:</b> " + row.lon + "<br /><b>CELL ID:</b> " + row.cell + "<br /><b>LAC:</b> " + row.area + "<br /><b>PCI:</b> " + row.unit + "<br />").openPopup();
       marker.bindTooltip("<span>" + row.cell   + "</span>" , {permanent: true, direction: 'bottom'}).openTooltip(); }
 	    
    markers.addLayer(marker); //Aggiungo il layer della mappa a quello dei cluster
